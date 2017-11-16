@@ -19,8 +19,14 @@ namespace TicketLog.Data
 
             var tickets = new Ticket[]
             {
-                new Ticket {ID=1, Issue="Apply Button", Description="Apply button not working",
-                            Severity ="Threat Level Midnight", TimesOccured=58, TicketDate=DateTime.Parse("2017-11-14") }
+                new Ticket {
+
+                    ID =1,
+                    Issue ="Apply Button",
+                    Description ="Apply button not working",
+                    Severity ="Threat Level Midnight",
+                    TimesOccured =58,
+                    SubmissionDate =DateTime.Parse("2017-11-14") }
             };
             foreach (Ticket t in tickets)
             {
