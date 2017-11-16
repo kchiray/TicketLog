@@ -20,6 +20,7 @@ namespace TicketLog.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Ticket>().ToTable("Ticket");
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

@@ -34,18 +34,7 @@ namespace TicketLog.Data
             } context.SaveChanges();
             {
 
-            }
-            //    ID { get; set; 
-            //    Time TicketDate
-            //    ng Issue
-            //{
-            //    get;
-            //    ng Description
-            //    TimesOccured
-            //    {
-            //        ng Severity {
-            //            g
-            //    {
+            }           
         }
     }
 }
