@@ -17,7 +17,7 @@ namespace TicketLog
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
-
+                .UseUrls("http://localhost:54178")
                 .UseIISIntegration()
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
