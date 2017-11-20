@@ -25,8 +25,7 @@ namespace TicketLog.Data
                     Issue ="Apply Button",
                     Description ="Apply button not working",
                     Severity ="Threat Level Midnight",
-                    TimesOccured =58,
-                    SubmissionDate =DateTime.Parse("2017-11-14") }
+                    TimesOccured =58 }
             };
             foreach (Ticket t in tickets)
             {

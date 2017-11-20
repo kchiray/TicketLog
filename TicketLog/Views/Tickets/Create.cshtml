@@ -7,17 +7,7 @@
 <h2>Create</h2>
 
 <form asp-action="Create">
-    <div class="form-horizontal">
-        <h4>Ticket</h4>
-        <hr />
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        <div class="form-group">
-            <label asp-for="SubmissionDate" class="col-md-2 control-label"></label>
-            <div class="col-md-10">
-                <input asp-for="SubmissionDate" class="form-control"  placeholder="yyyy-mm-dd"/>
-                <span asp-validation-for="SubmissionDate" class="text-danger"></span>
-            </div>
-        </div>
+    <div class="form-horizontal">        
         <div class="form-group">
             <label asp-for="Issue" class="col-md-2 control-label"></label>
             <div class="col-md-10">
@@ -28,7 +18,7 @@
         <div class="form-group">
             <label asp-for="Description" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="Description" class="form-control" @Html.TextArea("Description", new { rows = 10 })/>
+                <input asp-for="Description" class="form-control"/>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
         </div>
