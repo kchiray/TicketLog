@@ -16,7 +16,6 @@ namespace TicketLog.Data
         }
 
         public DbSet<Ticket> Tickets { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Ticket>().ToTable("Ticket");

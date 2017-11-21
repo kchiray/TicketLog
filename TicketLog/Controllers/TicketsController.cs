@@ -12,7 +12,7 @@ namespace TicketLog.Controllers
 {
     public class TicketsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;       
 
         public TicketsController(ApplicationDbContext context)
         {
@@ -23,6 +23,7 @@ namespace TicketLog.Controllers
         public async Task<IActionResult> Index()
         {
             return View(await _context.Tickets.ToListAsync());
+
         }
 
         // GET: Tickets/Details/5

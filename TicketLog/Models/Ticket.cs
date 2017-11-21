@@ -14,4 +14,19 @@ namespace TicketLog.Models
         public int TimesOccured { get; set; }
         public string Severity { get; set; }
     }
+
+    public enum Issues
+    {
+        Common = 1,
+        Sparingly = 2,
+        Rare = 3,
+        Doom = 4
+    };
+    public class Issue
+    {
+
+        public int Id { get; set; }
+        public Issues Issues { get; set; }
+
+    }
 }
