@@ -12,24 +12,30 @@
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Emails)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.NewApplicaitons)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.ToDo)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.YearToDate)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewApplicaitons)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToDo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearToDate)
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <th>
+                @Html.DisplayFor(modelitem => item.EntryDate)
+            </th>
             <td>
                 @Html.DisplayFor(modelItem => item.Emails)
             </td>
