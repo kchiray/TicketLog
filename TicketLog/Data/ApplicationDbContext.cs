@@ -16,10 +16,12 @@ namespace TicketLog.Data
         }
 
         public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Statistic> Statistics { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Ticket>().ToTable("Ticket");
+            modelBuilder.Entity<Ticket>().ToTable("Statistic");
             base.OnModelCreating(modelBuilder);
         }
     }

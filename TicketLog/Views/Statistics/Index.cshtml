@@ -1,0 +1,59 @@
+@model IEnumerable<TicketLog.Models.Statistic>
+
+@{
+    ViewData["Title"] = "Statistics";
+}
+
+<h2>Goal: 31,500</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.EntryDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Emails)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewApplicaitons)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToDo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YearToDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <th>
+                @Html.DisplayFor(modelitem => item.EntryDate)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Emails)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewApplicaitons)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToDo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearToDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

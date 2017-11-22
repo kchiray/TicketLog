@@ -1,0 +1,42 @@
+@model TicketLog.Models.Statistic
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Statistic</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Emails)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Emails)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NewApplicaitons)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NewApplicaitons)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ToDo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ToDo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.YearToDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.YearToDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
