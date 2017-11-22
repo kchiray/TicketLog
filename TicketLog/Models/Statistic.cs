@@ -8,7 +8,19 @@ namespace TicketLog.Models
     public class Statistic
     {
         public int Id { get; set; }
-        public String EntryDate { get { return DateTime.Now.ToString("dd/MM/yyyy"); } }
+        public DateTime EntryDate
+        {
+            get
+            {
+                DateTime entryDate = new DateTime();
+                return entryDate.Date;
+            }
+            set
+            {
+                EntryDate = value;
+            }
+        }
+        public int IncompleteApplications { get; set; }
         public int Emails { get; set; }
         public int NewApplicaitons { get; set; }
         public int ToDo { get; set; }
