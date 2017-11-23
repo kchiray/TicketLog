@@ -17,20 +17,20 @@ namespace TicketLog.Data
                 return; //DB has been seeded
             }
 
-            var tickets = new Ticket[]
-            {
-                new Ticket {
+            //var tickets = new Ticket[]
+            //{
+            //    new Ticket {
 
-                    ID =1,
-                    Issue ="Apply Button",
-                    Description ="Apply button not working",
-                    Severity ="Threat Level Midnight",
-                    TimesOccured =58 }
-            };
-            foreach (Ticket t in tickets)
-            {
-                context.Tickets.Add(t);
-            } context.SaveChanges();
+            //        ID =1,
+            //        Issue ="Apply Button",
+            //        Description ="Apply button not working",
+            //        Severity ="Threat Level Midnight",
+            //        TimesOccured =58 }
+            //};
+            //foreach (Ticket t in tickets)
+            //{
+            //    context.Tickets.Add(t);
+            //} context.SaveChanges();
             {
 
             }           
