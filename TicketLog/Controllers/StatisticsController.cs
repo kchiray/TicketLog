@@ -54,7 +54,7 @@ namespace TicketLog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,EntryDate,Emails,NewApplicaitons,ToDo,YearToDate")] Statistic statistic)
+        public async Task<IActionResult> Create([Bind("Id,EntryDate,Emails,NewApplicaitons,ToDo,YearToDate,IncompleteApplications")] Statistic statistic)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace TicketLog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,EntryDate,Emails,NewApplicaitons,ToDo,YearToDate")] Statistic statistic)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,EntryDate,Emails,NewApplicaitons,ToDo,YearToDate,IncompleteApplications")] Statistic statistic)
         {
             if (id != statistic.Id)
             {
