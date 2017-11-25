@@ -17,10 +17,6 @@
     <Content Include="wwwroot\css\site.css" />
     <Content Include="wwwroot\images\LakeLouise - Copy.jpg" />
     <Content Include="wwwroot\images\LakeLouise.jpg" />
-    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrapmdb.css" />
-    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrapmdb.min.css" />
-    <Content Include="wwwroot\lib\bootstrap\dist\css\mdb.css" />
-    <Content Include="wwwroot\lib\bootstrap\dist\css\mdb.min.css" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
