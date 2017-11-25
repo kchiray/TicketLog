@@ -11,14 +11,7 @@ namespace TicketLog.Controllers
         public IActionResult Index()
         {
             return View();
-        }
-
-        public IActionResult Errors()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
+        }       
 
         public IActionResult Statistics()
         {
