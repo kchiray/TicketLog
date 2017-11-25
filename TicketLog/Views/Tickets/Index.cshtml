@@ -4,16 +4,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h1 class="text-center">Tickets</h1>
+<h1 class="text-center alert alert-danger">Tickets</h1>
 
 <p>
     <a class="btn btn-default" asp-action="Create">New Ticket</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-striped">
+    <thead class="table-striped bg-warning">
         <tr>
                 <th>
-                    @Html.DisplayNameFor(model => model.SubmissionDate)
+                    Submission Date
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Issue)
@@ -22,7 +22,7 @@
                     @Html.DisplayNameFor(model => model.Description)
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.TimesOccured)
+                    Times Occured
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Severity)

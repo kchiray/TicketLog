@@ -4,31 +4,31 @@
     ViewData["Title"] = "Statistics";
 }
 
-<h2>Goal: 31,500</h2>
+<h1 class="text-center alert alert-success" >Goal: 31,500</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-default" asp-action="Create">Create Statistic</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-striped">
+    <thead class="table-striped bg-primary">
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.EntryDate)
+                Entry Date
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Emails)
             </th>            
             <th>
-                @Html.DisplayNameFor(model => model.NewApplicaitons)
+                New Applications
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ToDo)
+                To Do
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.YearToDate)
+                Year To Date
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.IncompleteApplications)
+                Incomplete Applications
             </th>
             <th></th>
         </tr>
@@ -56,7 +56,6 @@
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
