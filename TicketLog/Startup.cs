@@ -56,6 +56,7 @@ namespace TicketLog
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
                 app.UseBrowserLink();
+                app.UseStaticFiles();
             }
             else
             {

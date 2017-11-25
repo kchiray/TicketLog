@@ -23,7 +23,7 @@ namespace TicketLog.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Please Enter Times Issue Has Occured")]
         public int TimesOccured { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Please Enter Severity")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Please Pick Severity")]
         public string Severity { get; set; }
     }
 }

@@ -4,22 +4,21 @@
     ViewData["Title"] = "Create";
 }
 
-<h2>Create</h2>
-
 <form asp-action="Create">
-    <div class="form-horizontal">  
+
+  <div class="container" style=" background-repeat:no-repeat; background-image:url(/images/LakeLouise.jpg);" >
+   <h1 class="col-xs-offset-4" style="padding-top:50px; padding-bottom: 30px;">Create A Ticket</h1>
+    <div class="form-horizontal col-xs-offset-4">
         <div class="form-group">
-            <label asp-for="SubmissionDate" class="col-md-2 control-label"></label>
             <div class="col-md-10">
                 <input asp-for="SubmissionDate" class="form-control" />
                 <span asp-validation-for="SubmissionDate" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="Issue" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <select asp-for="Issue" class="form-control" >
-                    <option>Select Issue</option>
+                <select asp-for="Issue" class="form-control">
+                    <option value="" disabled-selected>Select Issue</option>
                     <option>Apply Now Button</option>
                     <option>Photo/Proof</option>
                     <option>Lost Snowpass</option>
@@ -30,24 +29,21 @@
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="Description" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="Description" class="form-control"/>
+                <input asp-for="Description" class="form-control" placeholder="Description" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="TimesOccured" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="TimesOccured" class="form-control" />
+                <input asp-for="TimesOccured" class="form-control" placeholder="Times Occured" />
                 <span asp-validation-for="TimesOccured" class="text-danger"></span>
             </div>
         </div>
         <div class="form-group">
-            <label asp-for="Severity" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <select asp-for="Severity" class="form-control" >
-                    <option>Select Severity</option>
+                <select asp-for="Severity" class="form-control">
+                    <option value="" disabled-selected>Select Severity</option>
                     <option>Low</option>
                     <option>Medium</option>
                     <option>High</option>
@@ -56,16 +52,15 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+            <div class="col-md-10">
+                <input type="submit" value="Create" class="btn btn-default btn-block" />
             </div>
         </div>
     </div>
+  </div>
 </form>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

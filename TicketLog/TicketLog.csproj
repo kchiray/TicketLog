@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
@@ -8,6 +8,20 @@
   <PropertyGroup>
     <UserSecretsId>aspnet-TicketLog-75daadb3-aea1-4114-93d9-df0da04522bf</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot/images\LakeLouise - Copy.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\css\site.css" />
+    <Content Include="wwwroot\images\LakeLouise - Copy.jpg" />
+    <Content Include="wwwroot\images\LakeLouise.jpg" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrapmdb.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\bootstrapmdb.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\mdb.css" />
+    <Content Include="wwwroot\lib\bootstrap\dist\css\mdb.min.css" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
@@ -29,6 +43,9 @@
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="1.0.1" />
     <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="1.0.1" />
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\css\site.css" />
   </ItemGroup>
 
 </Project>
