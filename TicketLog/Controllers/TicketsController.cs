@@ -20,8 +20,27 @@ namespace TicketLog.Controllers
         }
 
         // GET: Tickets
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder)
         {
+            ViewData["IssueSortParm"] = String.IsNullOrEmpty(sortOrder) ? "issue_desc" : "";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+            var tickets = from t in _context.Tickets
+                          select t;
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    tickets = tickets.OrderByDescending(t => t.Issue);
+                    break;
+                case "Date":
+                    tickets = tickets.OrderBy(t => t.SubmissionDate);
+                    break;
+                case "date_desc":
+                    tickets = tickets.OrderByDescending(t => t.SubmissionDate);
+                    break;
+                default:
+                    tickets = tickets.OrderBy(t => t.Issue);
+                    break;
+            }
             return View(await _context.Tickets.ToListAsync());
         }
 
