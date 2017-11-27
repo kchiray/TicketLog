@@ -11,8 +11,9 @@
 <form asp-action="Index" method="get">
     <div class="form-actions">
         <p>
-        <input type="text" name="SearchString" value="@ViewData["currentFilter"]" placeholder="Search by Issue"/>
-        <input type="submit" value="Search" class="btn btn-default" />
+        <input type="text" id="show" name="SearchString" value="@ViewData["currentFilter"]" placeholder="Search by Issue/Severity"/>
+        <input type="submit"  value="Search" class="btn btn-default" />
+            <a asp-action="Index" id="hidden" class="btn btn-default" style="visibility:hidden;">Back</a>          
         </p>
     </div>
 </form>

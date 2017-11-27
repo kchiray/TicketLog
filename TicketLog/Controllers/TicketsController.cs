@@ -20,14 +20,21 @@ namespace TicketLog.Controllers
         }
 
         // GET: Tickets
-        public async Task<IActionResult> Index(string sortOrder)
+        public async Task<IActionResult> Index(string sortOrder, string searchString)
         {
             ViewData["IssueSortParm"] = string.IsNullOrEmpty(sortOrder) ? "issue" : "";
             ViewData["SeveritySortparm"] = string.IsNullOrEmpty(sortOrder) ? "severity" : "Severity";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date" : "Date";
+            ViewData["CurentFilter"] = searchString;
+
             var tickets = from t in _context.Tickets
                           select t;
 
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                tickets = tickets.Where(t => t.Issue.Contains(searchString)
+                || t.Severity.Contains(searchString));
+            }
             switch (sortOrder)
             {
                 case "issue":
