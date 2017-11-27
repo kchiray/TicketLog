@@ -13,7 +13,6 @@ namespace TicketLog.Controllers
     public class TicketsController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private string subdate;
 
         public TicketsController(ApplicationDbContext context)
         {
@@ -21,9 +20,30 @@ namespace TicketLog.Controllers
         }
 
         // GET: Tickets
-        public async Task<IActionResult> Index(string sortOrder, string searchString)
-        {          
-            return View(await _context.Tickets.ToListAsync());
+        public async Task<IActionResult> Index(string sortOrder)
+        {
+            ViewData["IssueSortParm"] = string.IsNullOrEmpty(sortOrder) ? "issue" : "";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date" : "Date";
+            var tickets = from t in _context.Tickets
+                          select t;
+
+            switch (sortOrder)
+            {
+                case "issue":
+                    tickets = tickets.OrderByDescending(t => t.Issue);
+                        break;
+                case "Date":
+                    tickets = tickets.OrderBy(t => t.SubmissionDate);
+                        break;
+                case "date":
+                    tickets = tickets.OrderByDescending(t => t.SubmissionDate);
+                    break;
+                default:
+                    tickets = tickets.OrderBy(t => t.Issue);
+                    break;
+                
+            }
+            return View(await tickets.AsNoTracking().ToListAsync());
         }
 
         // GET: Tickets/Details/5

@@ -8,74 +8,6 @@
   <PropertyGroup>
     <UserSecretsId>aspnet-TicketLog-75daadb3-aea1-4114-93d9-df0da04522bf</UserSecretsId>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Content Remove="wwwroot/images\LakeLouise - Copy.jpg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="wwwroot\css\site.css" />
-    <Content Include="wwwroot\images\LakeLouise - Copy.jpg" />
-    <Content Include="wwwroot\images\LakeLouise.jpg" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\.gitignore" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\addons\pager\jquery.tablesorter.pager.css" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\addons\pager\jquery.tablesorter.pager.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\bower.json" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\build.xml" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\build\js.jar" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\build\jsmin.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\build\min.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\build\pack.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\build\packer.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\build\ParseMaster.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\build\writeFile.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\changelog" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\.tmp_index.html.55071~" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\assets\ajax-content.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\css\jq.css" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-ajax.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-attribute-sort.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-empty-table.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-extending-defaults.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-meta-headers.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-meta-parsers.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-meta-sort-list.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-option-debug.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-option-digits.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-option-sort-force.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-option-sort-key.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-option-sort-list.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-option-sort-order.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-option-text-extraction.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-options-headers.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-pager.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-parsers.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-trigger-sort.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-triggers.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-update-cell.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\example-widgets.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\img\external.png" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\index.html" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\js\docs.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\docs\js\examples.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\jquery-latest.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\jquery.metadata.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\jquery.tablesorter.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\jquery.tablesorter.min.js" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\LICENSE" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\package.json" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\README.md" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\themes\blue\asc.gif" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\themes\blue\bg.gif" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\themes\blue\blue.zip" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\themes\blue\desc.gif" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\themes\blue\style.css" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\themes\green\asc.png" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\themes\green\bg.png" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\themes\green\desc.png" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\themes\green\green.zip" />
-    <Content Include="wwwroot\lib\jquery\tablesorter\themes\green\style.css" />
-  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.2" />
@@ -99,11 +31,34 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.1" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="wwwroot\css\site.css" />
+    <None Include="wwwroot\images\banner1.svg" />
+    <None Include="wwwroot\images\banner2.svg" />
+    <None Include="wwwroot\images\banner3.svg" />
+    <None Include="wwwroot\images\banner4.svg" />
+    <None Include="wwwroot\js\site.js" />
+    <None Include="wwwroot\js\site.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\npm.js" />
+    <None Include="wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
     <None Include="wwwroot\lib\jquery\tablesorter\.gitignore" />
-    <None Include="wwwroot\lib\jquery\tablesorter\addons\pager\jquery.tablesorter.pager.css" />
     <None Include="wwwroot\lib\jquery\tablesorter\addons\pager\jquery.tablesorter.pager.js" />
-    <None Include="wwwroot\lib\jquery\tablesorter\build.xml" />
     <None Include="wwwroot\lib\jquery\tablesorter\build\js.jar" />
     <None Include="wwwroot\lib\jquery\tablesorter\build\jsmin.js" />
     <None Include="wwwroot\lib\jquery\tablesorter\build\min.js" />
@@ -112,32 +67,6 @@
     <None Include="wwwroot\lib\jquery\tablesorter\build\ParseMaster.js" />
     <None Include="wwwroot\lib\jquery\tablesorter\build\writeFile.js" />
     <None Include="wwwroot\lib\jquery\tablesorter\changelog" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\.tmp_index.html.55071~" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\assets\ajax-content.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\css\jq.css" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-ajax.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-attribute-sort.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-empty-table.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-extending-defaults.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-meta-headers.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-meta-parsers.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-meta-sort-list.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-option-debug.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-option-digits.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-option-sort-force.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-option-sort-key.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-option-sort-list.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-option-sort-order.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-option-text-extraction.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-options-headers.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-pager.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-parsers.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-trigger-sort.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-triggers.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-update-cell.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\example-widgets.html" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\img\external.png" />
-    <None Include="wwwroot\lib\jquery\tablesorter\docs\index.html" />
     <None Include="wwwroot\lib\jquery\tablesorter\docs\js\docs.js" />
     <None Include="wwwroot\lib\jquery\tablesorter\docs\js\examples.js" />
     <None Include="wwwroot\lib\jquery\tablesorter\jquery-latest.js" />
@@ -146,16 +75,8 @@
     <None Include="wwwroot\lib\jquery\tablesorter\jquery.tablesorter.min.js" />
     <None Include="wwwroot\lib\jquery\tablesorter\LICENSE" />
     <None Include="wwwroot\lib\jquery\tablesorter\README.md" />
-    <None Include="wwwroot\lib\jquery\tablesorter\themes\blue\asc.gif" />
-    <None Include="wwwroot\lib\jquery\tablesorter\themes\blue\bg.gif" />
     <None Include="wwwroot\lib\jquery\tablesorter\themes\blue\blue.zip" />
-    <None Include="wwwroot\lib\jquery\tablesorter\themes\blue\desc.gif" />
-    <None Include="wwwroot\lib\jquery\tablesorter\themes\blue\style.css" />
-    <None Include="wwwroot\lib\jquery\tablesorter\themes\green\asc.png" />
-    <None Include="wwwroot\lib\jquery\tablesorter\themes\green\bg.png" />
-    <None Include="wwwroot\lib\jquery\tablesorter\themes\green\desc.png" />
     <None Include="wwwroot\lib\jquery\tablesorter\themes\green\green.zip" />
-    <None Include="wwwroot\lib\jquery\tablesorter\themes\green\style.css" />
   </ItemGroup>
 
 </Project>
