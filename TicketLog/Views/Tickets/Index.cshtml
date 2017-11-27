@@ -9,11 +9,19 @@
 <p>
     <a class="btn btn-default" asp-action="Create">New Ticket</a>
 </p>
+<form asp-action="Index" method="get">
+    <div class="form-actions">
+        <p>
+        <input type="text" name="SearchString" value="@ViewData["currentFilter"]" placeholder="Search by Issue"/>
+        <input type="submit" value="Search" class="btn btn-default" />
+        </p>
+    </div>
+</form>
 <table class="table table-striped">
     <thead class="table-striped bg-warning">
         <tr>
                 <th>
-                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]">@Html.DisplayNameFor(model => model.SubmissionDate)</a>
+                    Submission Date
                 </th>
                 <th>
                     <a asp-action="Index" asp-route-sortOrder="@ViewData["IssueSortParm"]">@Html.DisplayNameFor(model => model.Issue)</a>
@@ -25,9 +33,11 @@
                     Times Occured
                 </th>
                 <th>
-                    @Html.DisplayNameFor(model => model.Severity)
+                    <a asp-route-sortOrder="@ViewData["DateSortParm"]">@Html.DisplayNameFor(model => model.Severity)</a>
                 </th>
-            <th></th>
+                <th>
+                    
+                </th>
         </tr>
     </thead>
     <tbody>

@@ -13,6 +13,7 @@ namespace TicketLog.Controllers
     public class TicketsController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private string subdate;
 
         public TicketsController(ApplicationDbContext context)
         {
@@ -20,19 +21,35 @@ namespace TicketLog.Controllers
         }
 
         // GET: Tickets
-        public async Task<IActionResult> Index(string sortOrder)
+        public async Task<IActionResult> Index(string sortOrder, string searchString)
         {
+            Ticket ticket = new Ticket();
+            subdate = ticket.SubmissionDate.ToString();
+
             ViewData["IssueSortParm"] = String.IsNullOrEmpty(sortOrder) ? "issue_desc" : "";
+            ViewData["SevSortParm"] = String.IsNullOrEmpty(sortOrder) ? "sev_desc" : "severity";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+
+            ViewData["CurrentFilter"] = searchString;
+
             var tickets = from t in _context.Tickets
                           select t;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                tickets = tickets.Where(t => t.Issue.Contains(searchString) 
+                          || t.Severity.Contains(searchString) || subdate.Contains(searchString));
+            }
             switch (sortOrder)
             {
-                case "name_desc":
+                case "issue_desc":
                     tickets = tickets.OrderByDescending(t => t.Issue);
                     break;
-                case "Date":
-                    tickets = tickets.OrderBy(t => t.SubmissionDate);
+                case "severity":
+                    tickets = tickets.OrderBy(t => t.Severity);
+                    break;
+                case "sev_desc":
+                    tickets = tickets.OrderByDescending(t => t.Severity);
                     break;
                 case "date_desc":
                     tickets = tickets.OrderByDescending(t => t.SubmissionDate);
