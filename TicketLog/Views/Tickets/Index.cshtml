@@ -32,7 +32,7 @@
                 Times Occured
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Severity)
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["SeveritySortParm"]">@Html.DisplayNameFor(model => model.Severity)</a>
             </th>
             <th>                    
             </th>
