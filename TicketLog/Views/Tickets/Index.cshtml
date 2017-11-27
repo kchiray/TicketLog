@@ -3,6 +3,11 @@
 @{
     ViewData["Title"] = "Index";
 }
+<head>
+<script type="text/javascript" src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="~/lib/jquery/tablesorter/jquery.tablesorter.js"></script> 
+</head>
+
 
 <h1 class="text-center alert alert-danger">Tickets</h1>
 
@@ -24,7 +29,7 @@
                     Submission Date
                 </th>
                 <th>
-                    <a asp-action="Index" asp-route-sortOrder="@ViewData["IssueSortParm"]">@Html.DisplayNameFor(model => model.Issue)</a>
+                    @Html.DisplayNameFor(model => model.Issue)
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Description)
@@ -33,7 +38,7 @@
                     Times Occured
                 </th>
                 <th>
-                    <a asp-route-sortOrder="@ViewData["DateSortParm"]">@Html.DisplayNameFor(model => model.Severity)</a>
+                    @Html.DisplayNameFor(model => model.Severity)
                 </th>
                 <th>
                     
@@ -66,3 +71,12 @@
 }
     </tbody>
 </table>
+
+<script>
+    $(document).ready(function () {
+        $("table").tablesorter({
+            
+        });
+    }
+    );
+</script>
