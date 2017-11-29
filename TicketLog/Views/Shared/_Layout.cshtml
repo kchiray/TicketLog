@@ -40,12 +40,13 @@
             </div>
         </div>
     </nav>
-    <div class="container body-content">
+    <div class="container-fluid">
         @RenderBody()
-        <footer class="text-center" style="position:relative;">
-            <strong>&copy; 2017 - Canadian Ski Counsel</strong>
-        </footer>
     </div>
+        <div class="modal-footer" style="position:fixed; left:0; bottom: 0px; right:0; padding:1rem; text-align:center;">
+            <strong>&copy; 2017 - Canadian Ski Counsel</strong>            
+        </div>
+   
 
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>
