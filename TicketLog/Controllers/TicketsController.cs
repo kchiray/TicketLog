@@ -22,9 +22,9 @@ namespace TicketLog.Controllers
         // GET: Tickets
         public async Task<IActionResult> Index(string sortOrder, string searchString)
         {
-            ViewData["IssueSortParm"] = string.IsNullOrEmpty(sortOrder) ? "issue" : "";
+            ViewData["IssueSortParm"] = string.IsNullOrEmpty(sortOrder) ? "issue" : "Issue";
             ViewData["SeveritySortparm"] = string.IsNullOrEmpty(sortOrder) ? "severity" : "Severity";
-            ViewData["DateSortParm"] = sortOrder == "Date" ? "date" : "Date";
+            ViewData["DateSortParm"] = sortOrder == "Date" ? "date" : "";
             ViewData["CurentFilter"] = searchString;
 
             var tickets = from t in _context.Tickets
@@ -40,21 +40,20 @@ namespace TicketLog.Controllers
                 case "issue":
                     tickets = tickets.OrderByDescending(t => t.Issue);
                         break;
+                case "Issue":
+                    tickets = tickets.OrderBy(t => t.Issue);
+                    break;
                 case "Severity":
                     tickets = tickets.OrderBy(t => t.Severity);
                     break;
                 case "severity":
                     tickets = tickets.OrderByDescending(t => t.Severity);
-                    break;
-                
-                case "Date":
-                    tickets = tickets.OrderBy(t => t.SubmissionDate);
-                        break;
+                    break;                             
                 case "date":
                     tickets = tickets.OrderByDescending(t => t.SubmissionDate);
                     break;
                 default:
-                    tickets = tickets.OrderBy(t => t.Issue);
+                    tickets = tickets.OrderBy(t => t.SubmissionDate);
                     break;
                 
             }
