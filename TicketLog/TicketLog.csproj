@@ -8,6 +8,10 @@
   <PropertyGroup>
     <UserSecretsId>aspnet-TicketLog-75daadb3-aea1-4114-93d9-df0da04522bf</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\TicketApiController.cs" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNet.WebApi" Version="5.2.3" />
