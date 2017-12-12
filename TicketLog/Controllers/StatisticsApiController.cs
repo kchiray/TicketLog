@@ -11,7 +11,7 @@ using TicketLog.Models;
 namespace TicketLog.Controllers
 {
     [Produces("application/json")]
-    [Route("api/StatisticsApi")]
+    [Route("api/Statistics")]
     public class StatisticsApiController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -21,14 +21,14 @@ namespace TicketLog.Controllers
             _context = context;
         }
 
-        // GET: api/StatisticsApi
+        // GET: api/Statistics
         [HttpGet]
         public IEnumerable<Statistic> GetStatistics()
         {
             return _context.Statistics;
         }
 
-        // GET: api/StatisticsApi/5
+        // GET: api/Statistics/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetStatistic([FromRoute] int id)
         {
@@ -47,7 +47,7 @@ namespace TicketLog.Controllers
             return Ok(statistic);
         }
 
-        // PUT: api/StatisticsApi/5
+        // PUT: api/Statistics/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStatistic([FromRoute] int id, [FromBody] Statistic statistic)
         {
@@ -82,7 +82,7 @@ namespace TicketLog.Controllers
             return NoContent();
         }
 
-        // POST: api/StatisticsApi
+        // POST: api/Statistics
         [HttpPost]
         public async Task<IActionResult> PostStatistic([FromBody] Statistic statistic)
         {
@@ -97,7 +97,7 @@ namespace TicketLog.Controllers
             return CreatedAtAction("GetStatistic", new { id = statistic.Id }, statistic);
         }
 
-        // DELETE: api/StatisticsApi/5
+        // DELETE: api/Statistics/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteStatistic([FromRoute] int id)
         {

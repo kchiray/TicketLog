@@ -11,7 +11,7 @@ using TicketLog.Models;
 namespace TicketLog.Controllers
 {
     [Produces("application/json")]
-    [Route("api/TicketsApi")]
+    [Route("api/Tickets")]
     public class TicketsApiController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -21,14 +21,15 @@ namespace TicketLog.Controllers
             _context = context;
         }
 
-        // GET: api/TicketsApi
+        // GET: api/Tickets
         [HttpGet]
         public IEnumerable<Ticket> GetTickets()
         {
             return _context.Tickets;
         }
 
-        // GET: api/TicketsApi/5
+
+        // GET: api/Tickets/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetTicket([FromRoute] int id)
         {
@@ -47,7 +48,7 @@ namespace TicketLog.Controllers
             return Ok(ticket);
         }
 
-        // PUT: api/TicketsApi/5
+        // PUT: api/Tickets/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTicket([FromRoute] int id, [FromBody] Ticket ticket)
         {
@@ -82,7 +83,7 @@ namespace TicketLog.Controllers
             return NoContent();
         }
 
-        // POST: api/TicketsApi
+        // POST: api/Tickets
         [HttpPost]
         public async Task<IActionResult> PostTicket([FromBody] Ticket ticket)
         {
@@ -97,7 +98,7 @@ namespace TicketLog.Controllers
             return CreatedAtAction("GetTicket", new { id = ticket.ID }, ticket);
         }
 
-        // DELETE: api/TicketsApi/5
+        // DELETE: api/Tickets/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteTicket([FromRoute] int id)
         {
