@@ -3,6 +3,10 @@
 @{
     ViewData["Title"] = "Index";
 }
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+</head>
 <body>
     <h1 class="center">Tickets</h1>
 
@@ -12,10 +16,12 @@
     <form asp-action="Index" method="get">
         <div class="form-actions">
             <p>
-                <i class="material-icons">search</i>
-                <input type="search" id="show"  name="SearchString" value="@ViewData["currentFilter"]" placeholder="Search by Issue/Severity" />
-                <input type="submit" value="Search" class="btn btn-default" />
-                <a asp-action="Index" id="hidden" class="btn btn-default" style="visibility:hidden;">Back</a>
+                
+                <div class="col s6 offset-s10">
+                    <i class="material-icons">search</i>
+                    <input type="search"  name="SearchString" value="@ViewData["currentFilter"]" placeholder="Search by Issue/Severity" />
+                    <input type="submit" value="Search" class="btn" />
+                </div>
             </p>
         </div>
     </form>
@@ -70,3 +76,5 @@
     </table>
 
 </body>
+
+</html>
