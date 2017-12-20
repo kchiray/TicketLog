@@ -14,7 +14,7 @@
             background: #FFF;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-            background-color: #314ff8;
+            background-color: #0094ff;
         }
         body {
             background-image: url("https://images4.alphacoders.com/803/thumb-1920-803313.jpg");
@@ -26,8 +26,8 @@
 </head>
 
 <body>
-    <div class="card-panel" id="login-box">
-        <h4 style="color:#0094ff; text-align:center;">Create A Statistic</h4>
+    <div class="card-panel center" id="login-box">
+        <h4 style="text-align:center;">Create A Statistic</h4>
         <hr />
         <form asp-action="Create">
             <div class="">
@@ -57,7 +57,7 @@
                     <span asp-validation-for="IncompleteApplications" class="text-danger"></span>
                 </div>
                 <input type="submit" value="Create" class="btn btn-default" />
-                <input type="submit" value="Cancel" class="btn red" />
+                <button type="reset" class="btn red">Reset</button>
             </div>
         </form>
     </div>

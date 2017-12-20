@@ -27,14 +27,21 @@
             <a href="#" class="brand-logo center">SnowPass</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="side-nav">
-            </ul>    
-            <ul id="nav-mobile" class="left hide-on-med-and-down">
+            </ul>   
+            <ul id="nav-mobile" class="left hide-on-med-and-down">                
                 <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                 <li><a asp-area="" asp-controller="Statistics" asp-action="Index">Statistics</a></li>
                 <li><a asp-area="" asp-controller="Tickets" asp-action="Index">Tickets</a></li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-                <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li>
+                    <div class="user-view">
+                        <img src="https://17dfdj3mzri3pv5x11aaujx1-wpengine.netdna-ssl.com/wp-content/uploads/2013/08/homepage-step-1.2-.png" />
+                        
+                    </div>
+                </li>
+                <li><a asp-area="" asp-controller="Home" asp-action="Index"><i class="large material-icons">&#xE3Df;</i><h4>SnowPass</h4></a></li>
+                <li><hr /><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
                 <li><a asp-area="" asp-controller="Statistics" asp-action="Index">Statistics</a></li>
                 <li><a asp-area="" asp-controller="Tickets" asp-action="Index">Tickets</a></li>
             </ul>

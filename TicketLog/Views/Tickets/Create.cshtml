@@ -4,63 +4,83 @@
     ViewData["Title"] = "Create";
 }
 
-<form asp-action="Create">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <style>
+        #login-box {
+            position: relative;
+            margin: 5% auto;
+            width: 400px;
+            height: 550px;
+            background: #FFF;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            background-color: #0094ff;
+        }
 
-  <div class="container">
-   <h1 class="col-xs-offset-4" style="padding-top:50px; padding-bottom: 30px;">Create A Ticket</h1>
-    <div class="form-horizontal col-xs-offset-4">
-        <div class="form-group">
-            <div class="col-md-10">
-                <input asp-for="SubmissionDate" class="form-control" />
-                <span asp-validation-for="SubmissionDate" class="text-danger"></span>
+        body {
+            background-image: url("https://images4.alphacoders.com/803/thumb-1920-803313.jpg");
+            background-repeat: no-repeat;
+            min-height: 100%;
+            min-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-panel center" id="login-box">
+        <form asp-action="Create">
+            <div class="container">
+                <h4 class="center">Create A Ticket</h4>
+                <div class="form-horizontal col-xs-offset-4">
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input asp-for="SubmissionDate" class="datepicker" placeholder="Submission Date" />
+                            <span asp-validation-for="SubmissionDate"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select asp-for="Issue" class="form-control">
+                            <option value="" disabled-selected>Select Issue</option>
+                            <option>Apply Now Button</option>
+                            <option>Photo/Proof</option>
+                            <option>Lost Snowpass</option>
+                            <option>Payment Cannot be Processed</option>
+                            <option>Application Cancelled</option>
+                            <option>Unable to Use Survey</option>
+                        </select>
+                        <span asp-validation-for="Issue"></span>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input asp-for="Description" class="form-control" placeholder="Description" />
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <input asp-for="TimesOccured" class="form-control" placeholder="Times Occured" />
+                            <span asp-validation-for="TimesOccured" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-10">
+                            <select asp-for="Severity" class="form-control">
+                                <option value="" disabled-selected>Select Severity</option>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                            <span asp-validation-for="Severity"></span>
+                        </div>
+                    </div>
+                    <input type="submit" value="Create" class="btn btn-default" />
+                    <button type="reset" value="Cancel" class="btn red" />
+                </div>
             </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                <select asp-for="Issue" class="form-control">
-                    <option value="" disabled-selected>Select Issue</option>
-                    <option>Apply Now Button</option>
-                    <option>Photo/Proof</option>
-                    <option>Lost Snowpass</option>
-                    <option>Payment Cannot be Processed</option>
-                    <option>Application Cancelled</option>
-                    <option>Unable to Use Survey</option>
-                </select>
-                <span asp-validation-for="Issue" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                <input asp-for="Description" class="form-control" placeholder="Description" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                <input asp-for="TimesOccured" class="form-control" placeholder="Times Occured" />
-                <span asp-validation-for="TimesOccured" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                <select asp-for="Severity" class="form-control">
-                    <option value="" disabled-selected>Select Severity</option>
-                    <option>Low</option>
-                    <option>Medium</option>
-                    <option>High</option>
-                </select>
-                <span asp-validation-for="Severity" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-10">
-                <input type="submit" value="Create" class="btn btn-default btn-block" />
-            </div>
-        </div>
-    </div>
-  </div>
-</form>
-
+        </form>
+     </div>
+</body>
+</html>
 
 
 @section Scripts {
