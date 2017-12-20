@@ -18,7 +18,7 @@
         <thead class="table-striped bg-primary">
             <tr>
                 <th>
-                    Entry Date
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]">Entry Date</a>
                 </th>
                 <th>
                     @Html.DisplayNameFor(model => model.Emails)

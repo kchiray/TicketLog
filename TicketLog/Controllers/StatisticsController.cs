@@ -20,9 +20,45 @@ namespace TicketLog.Controllers
         }
 
         // GET: Statistics
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder)
         {
-            return View(await _context.Statistics.ToListAsync());
+            ViewData["EmailsSortParm"] = string.IsNullOrEmpty(sortOrder) ? "emails" : "Emails";
+            ViewData["AppsSortparm"] = string.IsNullOrEmpty(sortOrder) ? "applications" : "Applications";
+            ViewData["ToDoSortparm"] = string.IsNullOrEmpty(sortOrder) ? "todo" : "ToDo";
+            ViewData["DateSortParm"] = sortOrder == "EDate" ? "edate" : "";
+
+            var statistics = from s in _context.Statistics
+                             select s;
+
+            switch (sortOrder)
+            {
+                case "emails":
+                    statistics = statistics.OrderByDescending(s => s.Emails);
+                        break;
+                case "Emails":
+                    statistics = statistics.OrderBy(s => s.Emails);
+                        break;
+                case "applications":
+                    statistics = statistics.OrderByDescending(s => s.NewApplicaitons);
+                        break;
+                case "Applications":
+                    statistics = statistics.OrderBy(s => s.NewApplicaitons);
+                        break;
+                case "todo":
+                    statistics = statistics.OrderByDescending(s => s.ToDo);
+                        break;
+                case "ToDo":
+                    statistics = statistics.OrderBy(s => s.ToDo);
+                        break;
+                case "EDate":
+                    statistics = statistics.OrderBy(s => s.EntryDate);
+                        break;
+                default:
+                    statistics = statistics.OrderByDescending(s => s.EntryDate);
+                    break;
+            }
+
+            return View(await statistics.AsNoTracking().ToListAsync());
         }
 
         // GET: Statistics/Details/5
