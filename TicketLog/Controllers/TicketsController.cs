@@ -50,10 +50,10 @@ namespace TicketLog.Controllers
                     tickets = tickets.OrderByDescending(t => t.Severity);
                     break;                             
                 case "date":
-                    tickets = tickets.OrderByDescending(t => t.SubmissionDate);
+                    tickets = tickets.OrderBy(t => t.SubmissionDate);
                     break;
                 default:
-                    tickets = tickets.OrderBy(t => t.SubmissionDate);
+                    tickets = tickets.OrderByDescending(t => t.SubmissionDate);
                     break;
                 
             }

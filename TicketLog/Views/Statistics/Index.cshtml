@@ -3,62 +3,72 @@
 @{
     ViewData["Title"] = "Statistics";
 }
+<html>
+<head>
 
-<h1 class="text-center alert alert-success" >Goal: 31,500</h1>
+</head>
+<body>
+<h1 class="center" >Goal: 31,500</h1>
 
-<p>
-    <a class="btn btn-default" asp-action="Create">Create Statistic</a>
-</p>
-<table class="table table-striped">
-    <thead class="table-striped bg-primary">
-        <tr>
-            <th>
-                Entry Date
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Emails)
-            </th>            
-            <th>
-                New Applications
-            </th>
-            <th>
-                To Do
-            </th>
-            <th>
-                Year To Date
-            </th>
-            <th>
-                Incomplete Applications
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <th>
-                @Html.DisplayFor(modelitem => item.EntryDate)
-            </th>
-            <td>
-                @Html.DisplayFor(modelItem => item.Emails)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NewApplicaitons)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ToDo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.YearToDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IncompleteApplications)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="">
+    <p>
+        <a class="btn btn-default" asp-action="Create">Create Statistic</a>
+    </p>
+    <table class="highlight bordered">
+        <thead class="table-striped bg-primary">
+            <tr>
+                <th>
+                    Entry Date
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Emails)
+                </th>
+                <th>
+                    New Applications
+                </th>
+                <th>
+                    To Do
+                </th>
+                <th>
+                    Year To Date
+                </th>
+                <th>
+                    Incomplete Applications
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>
+                        @Html.DisplayFor(modelitem => item.EntryDate)
+                    </th>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Emails)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NewApplicaitons)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ToDo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.YearToDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IncompleteApplications)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+</body>
+</html>

@@ -18,11 +18,7 @@ textarea {
     max-width: 280px;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
-}
+
+
+
 

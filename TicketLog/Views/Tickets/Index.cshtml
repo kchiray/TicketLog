@@ -3,66 +3,70 @@
 @{
     ViewData["Title"] = "Index";
 }
-<h1 class="text-center alert alert-danger">Tickets</h1>
+<body>
+    <h1 class="center red lighten-2">Tickets</h1>
 
-<p>
-    <a class="btn btn-default" asp-action="Create">New Ticket</a>
-</p>
-<form asp-action="Index" method="get">
-    <div class="form-actions">
-        <p>
-        <input type="text" id="show" name="SearchString" value="@ViewData["currentFilter"]" placeholder="Search by Issue/Severity"/>
-        <input type="submit"  value="Search" class="btn btn-default" />
-            <a asp-action="Index" id="hidden" class="btn btn-default" style="visibility:hidden;">Back</a>          
-        </p>
-    </div>
-</form>
-<table class="tablesorter table table-striped" id="tixTable">
-    <thead class="table-striped bg-warning">
-        <tr>
-            <th>
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]">Submission Date</a> 
-            </th>
-            <th>
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["IssueSortParm"]">@Html.DisplayNameFor(model => model.Issue)</a>
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                Times Occured
-            </th>
-            <th>
-                <a asp-action="Index" asp-route-sortOrder="@ViewData["SeveritySortParm"]">@Html.DisplayNameFor(model => model.Severity)</a>
-            </th>
-            <th>                    
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.SubmissionDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Issue)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TimesOccured)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Severity)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <p>
+        <a class="btn" asp-action="Create">New Ticket</a>
+    </p>
+    <form asp-action="Index" method="get">
+        <div class="form-actions">
+            <p>
+                <i class="material-icons">search</i>
+                <input type="search" id="show"  name="SearchString" value="@ViewData["currentFilter"]" placeholder="Search by Issue/Severity" />
+                <input type="submit" value="Search" class="btn btn-default" />
+                <a asp-action="Index" id="hidden" class="btn btn-default" style="visibility:hidden;">Back</a>
+            </p>
+        </div>
+    </form>
+    <table class="bordered highlight">
+        <thead class="table-striped bg-warning">
+            <tr>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["DateSortParm"]">Submission Date</a>
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["IssueSortParm"]">@Html.DisplayNameFor(model => model.Issue)</a>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    Times Occured
+                </th>
+                <th>
+                    <a asp-action="Index" asp-route-sortOrder="@ViewData["SeveritySortParm"]">@Html.DisplayNameFor(model => model.Severity)</a>
+                </th>
+                <th>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubmissionDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Issue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TimesOccured)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Severity)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
+</body>
