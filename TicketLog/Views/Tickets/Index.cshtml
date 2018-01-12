@@ -5,12 +5,20 @@
 }
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    
+    <style>
+        body {
+            padding-bottom: 150px;
+        }
+        .body-content {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    </style>
 </head>
 <body>
     <h1 class="center">Tickets</h1>
     <hr />
-
+<div class="body-content">
     <form asp-action="Index" method="get">
         <div class="form-actions">
             <a class="btn" asp-action="Create">New Ticket</a>
@@ -72,7 +80,7 @@
             }
         </tbody>
     </table>
-
+    </div>
 </body>
 
 </html>
